@@ -1,0 +1,37 @@
+---
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: data-policies
+policyDefaults:
+  namespace: openshift-gitops
+  remediationAction: "inform"
+  policySets:
+    - global-policyset
+policies:
+  - name: policy-encrypt-etcd
+    manifests:
+      - path: apiserver/cluster.yaml
+        remediationAction: "enforce"
+    controls:
+      - SC-28 Protection Of Information At Rest
+  - name: policy-remove-kubeadmin
+    complianceType: "mustnothave"
+    manifests:
+      - path: auth/kubeadmin.yaml
+        remediationAction: "enforce"
+    controls:
+      - SC-1 SYSTEM AND COMMUNICATIONS PROTECTION POLICY AND PROCEDURES
+  - name: policy-remove-auth-self-provisioner
+    complianceType: "mustonlyhave"
+    manifests:
+      - path: auth/self-provisioner.yaml
+        remediationAction: "enforce"
+    controls:
+      - SC-1 SYSTEM AND COMMUNICATIONS PROTECTION POLICY AND PROCEDURES
+policySets:
+  - name: global-policyset
+    description: Apply standard policies to all of your clusters.
+    placement:
+      placementName: placement-global-application
+...
