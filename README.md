@@ -1,5 +1,8 @@
 # acm-policygenerator
 
+## policy-generator file config reference.
+https://github.com/open-cluster-management-io/policy-generator-plugin/blob/main/docs/policygenerator-reference.yaml
+
 ## Create ManagedClusterSetBinding
 
 ```
