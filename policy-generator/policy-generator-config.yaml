@@ -3,6 +3,8 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: PolicyGenerator
 metadata:
   name: data-policies
+placementBindingDefaults:
+  name: placementbinding-global-policies
 policyDefaults:
   consolidateManifests: false
   namespace: openshift-gitops
