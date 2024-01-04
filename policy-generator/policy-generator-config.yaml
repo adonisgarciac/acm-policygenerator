@@ -4,6 +4,7 @@ kind: PolicyGenerator
 metadata:
   name: data-policies
 policyDefaults:
+  consolidateManifests: false
   namespace: openshift-gitops
   remediationAction: "inform"
   policySets:
