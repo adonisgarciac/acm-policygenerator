@@ -18,13 +18,13 @@ policies:
         remediationAction: "enforce"
     controls:
       - SC-28 Protection Of Information At Rest
-  - name: policy-remove-kubeadmin
-    complianceType: "mustnothave"
-    manifests:
-      - path: auth/kubeadmin.yaml
-        remediationAction: "enforce"
-    controls:
-      - SC-1 SYSTEM AND COMMUNICATIONS PROTECTION POLICY AND PROCEDURES
+#  - name: policy-remove-kubeadmin
+#    complianceType: "mustnothave"
+#    manifests:
+#      - path: auth/kubeadmin.yaml
+#        remediationAction: "enforce"
+#    controls:
+#      - SC-1 SYSTEM AND COMMUNICATIONS PROTECTION POLICY AND PROCEDURES
   - name: policy-remove-auth-self-provisioner
     complianceType: "mustonlyhave"
     manifests:

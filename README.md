@@ -1,5 +1,11 @@
 # acm-policygenerator
 
+## Create ManagedClusterSetBinding
+
+```
+oc apply -f managedclustersetbinding.yaml
+```
+
 ## Create placement
 
 ```
