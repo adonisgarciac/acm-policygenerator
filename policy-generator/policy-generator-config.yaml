@@ -34,6 +34,6 @@ policySets:
   - name: global-policyset
     description: Apply standard policies to all of your clusters.
     generatePolicySetPlacement: false
-#    placement:
-#      placementName: placement-global-application
+    placement:
+      placementName: placement-global-application
 ...
