@@ -35,4 +35,5 @@ policySets:
     description: Apply standard policies to all of your clusters.
     placement:
       placementName: placement-global-application
+      namespace: openshift-gitops
 ...
