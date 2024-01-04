@@ -26,7 +26,7 @@ policies:
   - name: policy-remove-auth-self-provisioner
     complianceType: "mustonlyhave"
     manifests:
-      - path: auth/self-provisioner.yaml
+      - path: auth/self-provisioners.yaml
         remediationAction: "enforce"
     controls:
       - SC-1 SYSTEM AND COMMUNICATIONS PROTECTION POLICY AND PROCEDURES
