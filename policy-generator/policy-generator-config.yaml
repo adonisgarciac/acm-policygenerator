@@ -7,8 +7,8 @@ policyDefaults:
   consolidateManifests: false
   namespace: openshift-gitops
   remediationAction: "inform"
-  policySets:
-    - global-policyset
+#  policySets:
+#    - global-policyset
 policies:
   - name: policy-encrypt-etcd
     manifests:
@@ -30,9 +30,9 @@ policies:
         remediationAction: "enforce"
     controls:
       - SC-1 SYSTEM AND COMMUNICATIONS PROTECTION POLICY AND PROCEDURES
-policySets:
-  - name: global-policyset
-    description: Apply standard policies to all of your clusters.
-    placement:
-      placementName: placement-global-application
+#policySets:
+#  - name: global-policyset
+#    description: Apply standard policies to all of your clusters.
+#    placement:
+#      placementName: placement-global-application
 ...
