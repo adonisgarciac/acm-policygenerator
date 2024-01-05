@@ -6,6 +6,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   kustomizeBuildOptions: --enable-alpha-plugins
+  resourceTrackingMethod: annotation
   repo:
     env:
     - name: KUSTOMIZE_PLUGIN_HOME
